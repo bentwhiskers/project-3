@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 
-const NavBar = () => {
+export deafult function Navbar() {
   return (
    <div>
 
@@ -15,4 +15,3 @@ const NavBar = () => {
   );
 };
 
-export default NavBar;
