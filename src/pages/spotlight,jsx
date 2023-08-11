@@ -1,4 +1,4 @@
-const Spotlight = () => {
+export default function Spotlight() {
   return (
    <div>
     <h2>Spotlight Page</h2>
@@ -8,6 +8,5 @@ const Spotlight = () => {
 
    </div>
   );
-};
+}
 
-export default Spotlight;

@@ -2,15 +2,13 @@ import NavBar from "./navbar";
 
 
 
-const Header = () => {
+export default function Header() {
   return (
    <div>
     <h2>Community Board</h2>
 
-    <NavBar></NavBar>
+    <NavBar/>
 
    </div>
   );
-};
-
-export default Header;
+}
