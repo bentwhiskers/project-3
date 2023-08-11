@@ -1,22 +1,19 @@
 import { Outlet } from 'react-router-dom';
 import './App.css';
 import React from 'react';
-import Login from './pages/login'; // Check the filename and capitalization
-import Signup from './pages/signup'; // Check the filename and capitalization
+import Header from './components/header';
+import Footer from './components/footer';
 
 function App() {
+
   return (
     <>
-      <Signup />
-      <br />
-     
-      <main className="mx-3">
-        <Outlet />
-      </main>
-
-      <Login />
+      <Header />
+      <Outlet />
+      <Footer />
+        
     </>
-  );
+  )
 }
 
 export default App;
