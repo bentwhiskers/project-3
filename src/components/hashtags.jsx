@@ -39,6 +39,19 @@ export default function Hashtags() {
           ))}
         </ul>
       </div>
+      <div>
+        <h2>Add Hashtag:</h2>
+        <input
+          type="text"
+          placeholder="Add your own hashtag..."
+          onKeyDown={(e) => {
+            if (e.key === 'Enter') {
+              handleSearch(e.target.value);
+              e.target.value = '';
+            }
+          }}
+        />
+      </div>
     </div>
   );
 }
