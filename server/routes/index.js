@@ -4,7 +4,7 @@ import pkg from 'body-parser';
 const { json } = pkg;
 
 import cors from 'cors';
-import './config/connection.js'; // Initialize database
+import '../config/connection.js'; // Initialize database
 
 const app = express();
 const PORT = 3000;
@@ -14,7 +14,7 @@ app.use(cors());
 
 // home route
 app.get('/', (req, res) => {
-    res.sendFile(path.join())
+   
 })
 
 app.listen(PORT, () => {

@@ -4,9 +4,9 @@ import User, { findOne } from './models/userModel.js';
 
 var app = express();
 
-const registerRoute = app;
+const signupRoute = app;
 
-registerRoute.post('/register', async (req, res) => {
+signupRoute.post('/signup', async (req, res) => {
     try {
         const { username, password } = req.body;
 
@@ -35,4 +35,4 @@ registerRoute.post('/register', async (req, res) => {
     }
 });
 
-export default registerRoute;
+export default signupRoute;
