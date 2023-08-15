@@ -4,14 +4,12 @@ import App from './App.jsx'
 import './index.css'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
-import About from './pages/about.jsx';
 import Error from './pages/error.jsx';
 import Events from './pages/events.jsx';
-import Guidelines from './pages/guidelines.jsx';
 import Home from './pages/home.jsx';
 import Login from './pages/login.jsx';
 import Signup from './pages/signup.jsx';
-import Spotlight from './pages/spotlight.jsx';
+import Classifieds from './pages/classifieds.jsx';
 
 // Defining accessible routes
 const router = createBrowserRouter([
@@ -25,16 +23,8 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: 'about',
-        element: <About />,
-      },
-      {
         path: 'events',
         element: <Events />,
-      },
-      {
-        path: 'guidelines',
-        element: <Guidelines />,
       },
       {
         path: 'login',
@@ -45,8 +35,8 @@ const router = createBrowserRouter([
         element: <Signup />,
       },
       {
-        path: 'spotlight',
-        element: <Spotlight />,
+        path: 'classifieds',
+        element: <Classifieds/>,
       },
     ],
   },
