@@ -1,5 +1,5 @@
 import Header from "../components/header";
-
+import Footer from "../components/footer";
 export default function Classifieds() {
   return (
    <div>
@@ -11,7 +11,7 @@ export default function Classifieds() {
     <a href = "/classPost"> Post</a> something you're looking to buy or sell!
     </p>
     
-
+    <Footer/>
    </div>
   );
 }
