@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Header from '../components/header';
+import Footer from '../components/footer';
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -36,6 +38,7 @@ const Login = () => {
 
     return (
         <div>
+            <Header/>
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div>
@@ -48,6 +51,7 @@ const Login = () => {
                 </div>
                 <button type="submit">Login</button>
             </form>
+            <Footer/>
         </div>
     );
 };
