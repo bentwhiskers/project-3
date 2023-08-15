@@ -1,6 +1,9 @@
+import Navbar from "../components/navbar";
+
 export default function Spotlight() {
   return (
    <div>
+    <Navbar />
     <h2>Spotlight Page</h2>
 
     <p>*I'm pretending like these are Classifieds! Srry!* 

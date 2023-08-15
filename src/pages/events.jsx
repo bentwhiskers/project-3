@@ -1,6 +1,10 @@
+import Navbar from "../components/navbar";
+
+
 export default function Events() {
   return (
    <div>
+    <Navbar />
     <h2>Events Page</h2>
     <div className = "Events">
     <p>Be inspired by new people and places with local Events! <a href = "">Post</a> to Host a new event! <a href = "">Search</a> for something to match your vibe!</p>
