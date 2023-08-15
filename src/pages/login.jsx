@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import Header from '../components/header';
+
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -36,6 +38,7 @@ const Login = () => {
 
     return (
         <div>
+            <Header/>
             <h2>Login</h2>
             <form onSubmit={handleSubmit}>
                 <div>

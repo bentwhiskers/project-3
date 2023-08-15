@@ -1,10 +1,11 @@
-
+import Header from "../components/header";
 import Footer from "../components/footer";
 import Hashtags from "../components/hashtags";
 
 function Home() {
   return (
    <div>
+    <Header/>
     <h1>Community Board</h1>
     <div className = "Home">
 
