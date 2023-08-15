@@ -43,3 +43,9 @@
 .h2 {
   color: black;
 }
+
+ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style-type: none;
+}
