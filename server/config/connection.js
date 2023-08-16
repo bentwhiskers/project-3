@@ -1,9 +1,8 @@
-import pkg from 'mongoose';
-const { connect, connection } = pkg;
+const { connect, connection } = require('mongoose');
 
-const MONGODB_URI = 'mongodb://localhost:27017/userDB';  // Change this to your connection string
+const connectionString = process.env.MONGODB_URI|| 'mongodb://127.0.0.1:27017/userDB';
 
-connect(MONGODB_URI, {
+connect(connectionString, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
 });
