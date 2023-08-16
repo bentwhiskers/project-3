@@ -2,9 +2,10 @@ import express from 'express';
 import mongoose from 'mongoose';
 import bcrypt from 'bcryptjs';
 import jwt from 'jsonwebtoken';
+import User from '../../models/userModel.js';
 
 const loginRoute = express.Router();
-const User = require('../../models/userModel');
+
 const JWT_SECRET = "";
 
 
