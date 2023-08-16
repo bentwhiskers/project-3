@@ -1,8 +1,9 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
+import Navbar from "../components/navbar";
 
 function Signup() {
   const [formData, setFormData] = useState({
-    username: '',
+    email: '',
     password: ''
   });
 
@@ -27,7 +28,8 @@ function Signup() {
     const data = await response.json();
     if (response.status === 201) {
       alert(data.message);
-      // You can redirect or clear the form here if necessary
+      // Redirect to home page with email as a query parameter
+      history.push(`/home?email=${formData.email}`);
     } else {
       alert(data.message);
     }
@@ -35,11 +37,13 @@ function Signup() {
 
   return (
     <div>
+      <Navbar />
+      
       <h2>Register</h2>
       <form onSubmit={handleSubmit}>
         <div>
-          <label>Username:</label>
-          <input type="text" name="username" value={formData.username} onChange={handleChange} required />
+          <label>Email:</label>
+          <input type="email" name="email" value={formData.email} onChange={handleChange} required />
         </div>
         <div>
           <label>Password:</label>
@@ -52,5 +56,6 @@ function Signup() {
 }
 
 export default Signup;
+
 
 
