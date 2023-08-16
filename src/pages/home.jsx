@@ -1,7 +1,7 @@
 import Header from "../components/header";
 import Footer from "../components/footer";
 import Hashtags from "../components/hashtags";
-
+import Navbar from "../components/navbar";
 function Home() {
   return (
    <div>
