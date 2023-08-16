@@ -1,32 +1,59 @@
 import { useState } from 'react';
-import axios from 'axios';
-import Navbar from "../components/navbar";
+import Header from '../components/header';
+import Footer from '../components/footer';
+
 const Login = () => {
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+    const [formData, setFormData] = useState({
+        username: '',
+        password: ''
+    });
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    
-    try {
-      const response = await axios.post('/api/login', { email, password });
-      console.log(response.data); // Handle successful login here
-    } catch (error) {
-      console.error(error.response.data); // Handle login error here
-    }
-  };
+    const handleChange = (e) => {
+        setFormData({
+            ...formData,
+            [e.target.name]: e.target.value
+        });
+    };
 
-  return (
-    <div>
-      < Navbar />
-      <h2>Login</h2>
-      <form onSubmit={handleSubmit}>
-        <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-        <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-        <button type="submit">Login</button>
-      </form>
-    </div>
-  );
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        
+        const response = await fetch('http://localhost:3000/login', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(formData)
+        });
+        
+        const data = await response.json();
+        if (response.status === 200) {
+            localStorage.setItem('token', data.token); // Store the token
+            alert('Logged in successfully!');
+            // Redirect or update the state
+        } else {
+            alert(data.message);
+        }
+    };
+
+    return (
+        <div>
+            <Header/>
+            <h2>Login</h2>
+            <form onSubmit={handleSubmit}>
+                <div>
+                    <label>Username:</label>
+                    <input type="text" name="username" value={formData.username} onChange={handleChange} required />
+                </div>
+                <div>
+                    <label>Password:</label>
+                    <input type="password" name="password" value={formData.password} onChange={handleChange} required />
+                </div>
+                <button type="submit">Login</button>
+            </form>
+            <Footer/>
+        </div>
+    );
 };
 
 export default Login;

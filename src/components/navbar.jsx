@@ -7,15 +7,16 @@ export default function Navbar() {
   };
 
   return (
-    <div>
-      <ul>
-        <li><Link to="/" style={linkStyle}>Home</Link></li>
-        <li><Link to="/Events" style={linkStyle}>Events</Link></li>
-        <li><Link to="/Spotlight" style={linkStyle}>Spotlight</Link></li>
-        <li><Link to="/Login" style={linkStyle}>Login</Link></li>
-        <li><Link to="/Signup" style={linkStyle}>Sign up</Link></li>
-      </ul>
-    </div>
+   <div>
+
+    <ul>
+    <li><Link to = '/'>Home</Link></li>
+    <li><Link to = '/Events'>Events</Link></li>
+    <li><Link to = '/Classifieds'>Classifieds</Link></li>
+    <li><Link to = '/Login'>Login</Link></li>
+    </ul>
+
+   </div>
   );
 }
 
