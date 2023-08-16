@@ -4,7 +4,9 @@ import Hashtags from "../components/hashtags";
 import Navbar from "../components/navbar";
 function Home() {
   return (
+    
    <div>
+    <Navbar />
     <Header/>
     <h1>Community Board</h1>
     <div className = "Home">

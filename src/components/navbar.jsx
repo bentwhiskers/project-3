@@ -14,6 +14,7 @@ export default function Navbar() {
     <li><Link to = '/Events'>Events</Link></li>
     <li><Link to = '/Classifieds'>Classifieds</Link></li>
     <li><Link to = '/Login'>Login</Link></li>
+    <li><Link to = '/signup'>Sign up</Link></li>
     </ul>
 
    </div>
