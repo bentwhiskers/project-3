@@ -3,7 +3,9 @@ import Footer from "../components/footer";
 
 function Home() {
   return (
+    
    <div>
+    <Navbar />
     <Header/>
     
     <div className = "Home">
