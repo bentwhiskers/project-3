@@ -5,7 +5,6 @@ function Home() {
   return (
     
    <div>
-    <Navbar />
     <Header/>
     
     <div className = "Home">
