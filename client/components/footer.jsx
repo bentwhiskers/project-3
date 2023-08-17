@@ -1,7 +1,7 @@
 export default function Footer() {
     return (
      <div>
-      <h4>Contact:</h4> 
+      <h4>Contact the Creators:</h4> 
       <ul>
         <li>Caroline B: github.com/carolinebea</li>
         <li>Erica A: github.com/bentwhiskers</li>

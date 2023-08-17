@@ -1,24 +1,8 @@
-import express from 'express';
-import dotenv from 'dotenv';
-import pkg from 'body-parser';
-import router from './api/index.js';
+const router = require('express').Router();
+const api = require('./api');
 
-dotenv.config();
 
-const { json } = pkg;
+router.use('/api', api);
 
-import cors from 'cors';
-import '../config/connection.js'; // Initialize database
+export default router;
 
-const app = express();
-const PORT = 3000;
-
-app.use(json());
-app.use(cors()); 
-
-// routes
-app.use(router);
-
-app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}🚀`);
-});

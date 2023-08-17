@@ -6,10 +6,6 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 
 import Error from './pages/error.jsx';
 import Events from './pages/events.jsx';
-
-
-
-
 import Home from './pages/home.jsx';
 import Login from './pages/login.jsx';
 import Signup from './pages/signup.jsx';
