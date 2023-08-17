@@ -1,10 +1,12 @@
 const express = ('express');
 const mongoose = ('mongoose');
 const User = ('./models/User');
-
+const routes = ('./routes');
+import cors from 'cors';
 const app = express();
 const PORT = process.env.PORT || 5000;
 
+// this will move to its own file called connection.js under config
 // Connect to MongoDB
 mongoose.connect('mongodb://localhost:27017/myapp', {
   useNewUrlParser: true,
@@ -19,7 +21,10 @@ mongoose.connect('mongodb://localhost:27017/myapp', {
 
 // Middleware
 app.use(express.json());
+app.use(cors()); 
+app.use(routes);
 
+// this will move to signup routes
 // Create a sign-up route
 app.post('/api/signup', async (req, res) => {
   try {
