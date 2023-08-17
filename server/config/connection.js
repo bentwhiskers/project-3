@@ -1,19 +1,15 @@
-const { connect, connection } = require('mongoose');
+import {connect, connection} from 'mongoose';
 
-const connectionString = process.env.MONGODB_URI|| 'mongodb://127.0.0.1:27017/userDB';
-
-connect(connectionString, {
-    useNewUrlParser: true,
-    useUnifiedTopology: true,
+// Connect to MongoDB
+connect('mongodb://localhost:27017/myapp', {
+  useNewUrlParser: true,
+  useUnifiedTopology: true,
+})
+.then(() => {
+  console.log('Connected to MongoDB');
+})
+.catch((error) => {
+  console.error('MongoDB connection error:', error);
 });
 
-const db = connection;
-
-db.on('error', console.error.bind(console, 'connection error:'));
-db.once('open', function() {
-  console.log("Connected to MongoDB");
-});
-
-export default db;
-
-
+module.exports = connection;

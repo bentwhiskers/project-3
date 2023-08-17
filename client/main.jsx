@@ -42,10 +42,7 @@ const router = createBrowserRouter([
       },
       {
         path: 'classifieds',
-
         element: <Classifieds/>,
-
-    
       },
     ],
   },
