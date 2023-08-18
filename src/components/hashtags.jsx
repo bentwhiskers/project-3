@@ -23,7 +23,7 @@ export default function Hashtags() {
 
   return (
     <div>
-      <h1>Product Search with Hashtags</h1>
+      <h1>Product Search</h1>
       <input
         type="text"
         value={searchInput}
