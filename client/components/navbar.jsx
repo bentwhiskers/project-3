@@ -8,7 +8,10 @@ const NavContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: .5rem 1rem;
+  box-sizing: border-box;
+  padding-top: 0;
+  margin-top: 0;
+  padding-bottom: 1rem;
 `;
 
 const NavLinks = styled.div`
@@ -18,13 +21,13 @@ const NavLinks = styled.div`
     padding: .5rem;
     text-decoration: none;
     transition: color 0.3s ease;
-    border: 2px solid #8CB369;
+    border: 2px solid #5B8E7D;
     border-radius: 50px 20px;
-
+    box-shadow: 3px 6px #48685D;
 
     &.active {
       font-weight: bold;
-      background-color: #F4E285;
+      background-color: #FAC99F;
     }
 
     &:hover {
