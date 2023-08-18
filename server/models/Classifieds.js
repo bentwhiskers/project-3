@@ -1,23 +1,31 @@
-const mongoose = ('mongoose');
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
-const classifiedsSchema = new mongoose.Schema({
+
+
+const classifiedsSchema = new Schema({
     title: {
-
+        type: String,
+        minLength: 3,
+        maxLength: 160,
     },
     description: {
-
+        type: String, 
+        minLength: 5,
+        maxLength: 100,
     },
     date: {
-
+        type: Date,
+        default: Date.now,
     },
-    option: {
-
-    },
+   
     tags: {
-
+        type: Schema.Types.ObjectId,
+        ref: 'Tag',
     }
 });
 
-const Classifieds = mongoose.model.('Classifieds', classifiedsSchema);
+const Classifieds = mongoose.model('Classifieds', classifiedsSchema);
 
-export default Classifieds;
+export default  Classifieds;
+
