@@ -10,7 +10,7 @@ function SignupForm() {
     e.preventDefault();
 
     try {
-      const response = await fetch('/api/signup', {
+      const response = await fetch('server/routes/api/signupRoutes.js', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -19,6 +19,9 @@ function SignupForm() {
       });
 
       if (response.ok) {
+        setEmail('');
+        setPassword('');
+        //window.location.href = '/login';
         // Handle success, maybe redirect to another page
         console.log('User registered successfully');
       } else {
