@@ -24,6 +24,7 @@ export default function Header() {
     </h2>
     <h4
       css={{
+        color: 'white',
         fontSize: '20px',
         fontStyle: 'italic',
         paddingTop: '0',
