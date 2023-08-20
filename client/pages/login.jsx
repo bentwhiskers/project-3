@@ -1,6 +1,7 @@
-import { useState } from 'react';
+
 import Header from '../components/header';
 import Footer from '../components/footer';
+import { useState } from 'react';
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -18,7 +19,7 @@ const Login = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         
-        const response = await fetch('http://localhost:3000/login', {
+        const response = await fetch('server/routes/api/loginRoutes.js', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
