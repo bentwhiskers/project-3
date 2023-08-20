@@ -16,15 +16,16 @@ const NavContainer = styled.div`
 
 const NavLinks = styled.div`
   a {
-    color: black;
+    color: white;
     margin-left: 1rem;
-    padding: .5rem;
+    padding: .75rem;
     text-decoration: none;
     transition: color 0.3s ease;
     border: 2px solid #5B8E7D;
     border-radius: 50px 20px;
-    box-shadow: 3px 6px #48685D;
-
+    box-shadow: 3px 6px 5px #48685D;
+    font-family: font-family: Tahoma, Geneva, sans-serif;
+    
     &.active {
       font-weight: bold;
       background-color: #FAC99F;

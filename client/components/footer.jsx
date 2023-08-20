@@ -1,12 +1,32 @@
+/** @jsxImportSource @emotion/react */
+import { jsx } from '@emotion/react';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+
+const ListStyle = styled.li`
+  color: white;
+  font-weight: bold;
+  
+`;
+
+const LinkStyle = styled.a`
+  color: #F4E285;
+  font-weight: bold;
+`;
+
 export default function Footer() {
     return (
      <div>
-      <h4>Contact the Creators:</h4> 
+      <h4 css={{
+        color: 'white',
+        fontWeight: 'bold',
+
+      }}>Contact the Creators:</h4> 
       <ul>
-        <li>Caroline B: github.com/carolinebea</li>
-        <li>Erica A: github.com/bentwhiskers</li>
-        <li>Jake M: github.com/mobleyj2</li>
-        <li>David G: github.com/Gcod0</li>
+        <ListStyle>Caroline B: <LinkStyle>github.com/carolinebea</LinkStyle></ListStyle>
+        <ListStyle>Erica A: <LinkStyle>github.com/bentwhiskers</LinkStyle></ListStyle>
+        <ListStyle>Jake M: <LinkStyle>github.com/mobleyj2</LinkStyle></ListStyle>
+        <ListStyle>David G: <LinkStyle>github.com/Gcod0</LinkStyle></ListStyle>
       </ul>
      </div>
     );
