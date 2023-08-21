@@ -9,7 +9,7 @@ export default function Classifieds() {
 
     <p>
     
-    <a href = "/classPost"> Post</a> something you're looking to buy or sell! <a href = "/search">Search</a> for something!
+    Post something you're looking to buy or sell! <a href = "/search">Search</a> for something!
     </p>
     <ClassPost/>
     <Footer/>

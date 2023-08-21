@@ -5,6 +5,13 @@
 //date picker for date and time instaad of typing in
 
 import { useState } from 'react';
+import styled from '@emotion/styled'
+
+const EventForm = styled.form(
+  {
+    
+  }
+)
 
 
 function EventPost() {
