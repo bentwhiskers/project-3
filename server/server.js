@@ -1,19 +1,19 @@
 const express = require('express'); // Correct import statement
-const db = require('./server/config/connection'); // Correct import statement
-const routes = require('./server/routes'); // Correct import statement
+const db = require('./config/connection'); // Correct import statement
+const routes = require('./routes'); // Correct import statement
 const cors = require('cors'); // Correct import statement
 const app = express();
 const PORT = process.env.PORT || 5000;
 const bodyParser = require('body-parser'); // Correct import statement
 const bcrypt = require('bcrypt'); // Correct import statement
 const jwt = require('jsonwebtoken'); // Correct import statement
-const User = require('./server/models/user'); // Correct import statement
+const User = require('./models/user'); // Correct import statement
 const { ApolloServer } = require('@apollo/server');
 const { expressMiddleware } = require('@apollo/server/express4');
 //const { authMiddleware } = require('./utils/auth');
 
 // Import the two parts of a GraphQL schema
-const { typeDefs, resolvers } = require('./server/schemas');
+const { typeDefs, resolvers } = require('./schemas');
 
 app.use(cors());
 
