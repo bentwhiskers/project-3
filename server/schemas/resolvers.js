@@ -1,17 +1,17 @@
 const { User, Classifieds, Events } = require('../models');
-const { signToken, AuthenticationError } = require('../utils/auth');
+//const { signToken, AuthenticationError } = require('../utils/auth');
 
 const resolvers = {
   Query: {
-    me: async (parent, args, context) => {
-      if (context.user) {
-        const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
+    // me: async (parent, args, context) => {
+    //   if (context.user) {
+    //     const userData = await User.findOne({ _id: context.user._id }).select('-__v -password');
 
-        return userData;
-      }
+    //     return userData;
+    //   }
 
-      throw AuthenticationError;
-    },
+    //   throw AuthenticationError;
+    // },
     getEvent : async () => {
       const eventData = await Event.findAll({})
       return eventData
@@ -22,28 +22,28 @@ const resolvers = {
   },
 
   Mutation: {
-    addUser: async (parent, args) => {
-      const user = await User.create(args);
-      const token = signToken(user);
+    // addUser: async (parent, args) => {
+    //   const user = await User.create(args);
+    //   const token = signToken(user);
 
-      return { token, user };
-    },
-    login: async (parent, { email, password }) => {
-      const user = await User.findOne({ email });
+    //   return { token, user };
+    // },
+    // login: async (parent, { email, password }) => {
+    //   const user = await User.findOne({ email });
 
-      if (!user) {
-        throw AuthenticationError;
-      }
+    //   if (!user) {
+    //     throw AuthenticationError;
+    //   }
 
-      const correctPw = await user.isCorrectPassword(password);
+    //   const correctPw = await user.isCorrectPassword(password);
 
-      if (!correctPw) {
-        throw AuthenticationError;
-      }
+    //   if (!correctPw) {
+    //     throw AuthenticationError;
+    //   }
 
-      const token = signToken(user);
-      return { token, user };
-    },
+    //   const token = signToken(user);
+    //   return { token, user };
+    // },
     addEvent: async (parent, { eventData }, context) => {
       if (context.user) {
         const updatedEvent = await Event.create(
@@ -68,19 +68,19 @@ const resolvers = {
 
       throw AuthenticationError;
     },
-    removeBook: async (parent, { bookId }, context) => {
-      if (context.user) {
-        const updatedUser = await User.findOneAndUpdate(
-          { _id: context.user._id },
-          { $pull: { savedBooks: { bookId } } },
-          { new: true }
-        );
+    // removeBook: async (parent, { bookId }, context) => {
+    //   if (context.user) {
+    //     const updatedUser = await User.findOneAndUpdate(
+    //       { _id: context.user._id },
+    //       { $pull: { savedBooks: { bookId } } },
+    //       { new: true }
+    //     );
 
-        return updatedUser;
-      }
+    //     return updatedUser;
+    //   }
 
-      throw AuthenticationError;
-    },
+    //   throw AuthenticationError;
+    // },
   },
 };
 

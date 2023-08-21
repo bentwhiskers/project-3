@@ -1,10 +1,12 @@
-const gql = require("apollo-server-express")
+const {gql} = require("apollo-server-express")
 
 const typeDefs = gql`
 
+scalar Date
+
 type Event {
   title: String
-  description: String,
+  description: String
   date: Date
   time: String
 
@@ -12,7 +14,7 @@ type Event {
 
 type Classifieds {
   title: String
-  description: String,
+  description: String
   date: Date
   time: String
 
@@ -20,14 +22,14 @@ type Classifieds {
 
 input EventInput {
   title: String
-  description: String,
+  description: String
   date: Date
   time: String
 }
 
 input ClassifiedsInput {
   title: String
-  description: String,
+  description: String
   date: Date
   time: String
 }
@@ -46,3 +48,5 @@ type Mutation{
 
 
 `
+
+module.exports = typeDefs
