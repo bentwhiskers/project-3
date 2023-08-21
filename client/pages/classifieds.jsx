@@ -30,10 +30,13 @@ export default function Classifieds() {
   return (
    <div>
     <Header/>
+
     <h2 css={{ color: 'white', fontSize: '2rem' }}>Classifieds Page</h2>
       <StyledP>
         <StyledLink href = "/classPost">Post</StyledLink> something you're looking to buy or sell! <StyledLink href = "/search">Search</StyledLink> for something!
       </StyledP>
+
+
     <ClassPost/>
     <Footer/>
    </div>
