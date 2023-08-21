@@ -15,8 +15,9 @@ const Description = styled.div`
   font-size: 1.25em;
   line-height: 1.75em;
   font-weight: regular;
-  padding: 2em;
-
+  padding: 1.5em;
+  background-color: #96D2BE;
+  border-radius: 60px 20px;
 `;
 
 const StyledImage = styled.img`
@@ -27,7 +28,7 @@ const StyledImage = styled.img`
   border-radius: 50%;
   padding: 3px;
   box-shadow: 4px 4px 8px #FFAF69;
-  
+  margin: 1em;
 `;
 
 const SecondImage = styled.img`
@@ -37,6 +38,7 @@ const SecondImage = styled.img`
   border: 3px solid #BC4B51;
   padding: 3px;
   box-shadow: 4px 4px 8px #FFAF69;
+  margin: 1em;
 `;
 
 const LinkStyle = styled.span`
@@ -54,7 +56,7 @@ function Home() {
           
           <StyledImage src={img} alt='silhouette of people in front of a sunset'></StyledImage>
             
-            <Description>There is something here for you on this Local Community Board! A simple way to reduce paper consumption and increase awareness of community activities, our online Community Board connects neigbors effortlessly. Viewing the <a href="/events"><LinkStyle>Events</LinkStyle></a> tag will lead you to local gatherings such as farmers' markets, yard sales, and festivals. The <a href= "/classifieds"><LinkStyle>Classifieds</LinkStyle></a> tag will allow you to view ads for things to buy, sell, or trade!</Description>
+            <Description>There is something here for you on this <strong>Local Community Board</strong>! A simple way to reduce paper consumption and increase awareness of community activities, our online LocaleLink<i className='fas fa-link'></i> connects neigbors effortlessly. Viewing the <a href="/events"><LinkStyle>Events</LinkStyle></a> tag will lead you to local gatherings such as farmers' markets, yard sales, and festivals. The <a href= "/classifieds"><LinkStyle>Classifieds</LinkStyle></a> tag will allow you to view ads for things to buy, sell, or trade!</Description>
               <SecondImage src={imgTwo} alt='five people grabbing eachothers wrists'></SecondImage>
 
                 <Footer/>

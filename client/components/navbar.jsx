@@ -46,7 +46,7 @@ export default function Navbar() {
       <NavContainer>
         <NavLinks>
           <ul>
-            {['/', '/Events', '/Classifieds', '/Login', '/signup'].map(path => (
+            {['/', '/Events', '/Classifieds', '/Login', '/Signup'].map(path => (
               <li key={path}>
                 <Link 
                   to={path} 

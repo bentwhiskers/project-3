@@ -1,6 +1,40 @@
 import Header from '../components/header';
 import Footer from '../components/footer';
 import React, { useState } from 'react';
+/** @jsxImportSource @emotion/react */
+import { jsx } from '@emotion/react';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1em;
+  margin: 0 auto;
+  color: white;
+  font-weight: bold;
+  border: 5px solid #F4A259;
+  border-radius: 35%;
+  width: 25%;
+`;
+
+const StyledButton = styled.button`
+  padding: 1em;
+  background-color: #BC4B51;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  curson: pointer;
+
+  &:hover {
+    background-color: white;
+    border: 2px solid #BC4B51;
+    color: #BC4B51;
+    font-weight: bold;
+  }
+`;
+
 
 function SignupForm() {
   const [email, setEmail] = useState('');
@@ -34,25 +68,35 @@ function SignupForm() {
   };
 
   return (
-    <form onSubmit={handleSubmit}>
-      <Header/>
-      <label>Email:</label>
-      <input
-        type="email"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-        required
-      />
-      <label>Password:</label>
-      <input
-        type="password"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-        required
-      />
-      <button type="submit">Sign Up</button>
-      <Footer />
-    </form>
+    
+    <div>
+    
+    <Header/>
+
+      <h2 css={{ color: 'white', fontSize: '2em' }}>Sign-Up</h2>
+
+      <StyledForm onSubmit={handleSubmit}>
+
+        <label>Email:</label>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+            />
+        <label>Password:</label>
+          <input
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <br></br>
+          <StyledButton type="submit">Sign Up</StyledButton>
+            
+        </StyledForm>
+        <Footer />
+    </div>
   );
 }
 

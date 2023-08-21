@@ -9,12 +9,16 @@ const ListStyle = styled.li`
   color: white;
   font-weight: bold;
   padding: .5em;
-  
+  text-align: center;
 `;
 
 const LinkStyle = styled.a`
   color: #F4E285;
   font-weight: bold;
+
+  &:hover {
+    color: #BC4B51;
+  }
 `;
 
 export default function Footer() {
@@ -23,6 +27,7 @@ export default function Footer() {
       <h4 css={{
         color: 'white',
         fontWeight: 'bold',
+        textAlign: 'center',
 
       }}>Contact the Creators:</h4> 
       <ul>
