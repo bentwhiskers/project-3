@@ -7,7 +7,7 @@ const app = express();
 app.use(cors());
 
 // Mount the '/api' prefix for your API routes
-app.use('/api', api);
+//app.use('/api', api);
 
 // Start the server
 const PORT = process.env.PORT || 5000;
