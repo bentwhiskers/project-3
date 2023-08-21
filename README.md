@@ -14,7 +14,6 @@ This MERN Stack single-page application is designed for users to be able to conn
 4. [FutureDev](#futureDev)
 5. [License](#license)
 6. [Questions](#questions)
-7. [Credits](#credits)
 
 ## Dependencies/Packages
 Our app uses: 
@@ -31,9 +30,9 @@ Our app uses:
 
 ## Usage
 To use, visit our deployed🚀 application with Heroku at this link:
-> 
+> ☆ https://locale-link-5bc9ca05d178.herokuapp.com/
 
-
+![img of LocaleLink website](./client/assets/images/localeLink.png)
 
 ## Future Development
 
@@ -51,8 +50,6 @@ To use, visit our deployed🚀 application with Heroku at this link:
  - abbott1414@gmail.com 
  - coraline.bea@gmail.com
  - mobleyj2@gmail.com 
- - 
+ - dgirton2@gmail.com
 
-## Credits
 
- - https://www.pexels.com/@eva-bronzini/ - 

@@ -2,6 +2,40 @@
 import Header from '../components/header';
 import Footer from '../components/footer';
 import { useState } from 'react';
+/** @jsxImportSource @emotion/react */
+import { jsx } from '@emotion/react';
+import { css } from '@emotion/react';
+import styled from '@emotion/styled';
+
+const StyledForm = styled.form`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 25%;
+  margin: 0 auto;
+  border: 5px solid #F4A259;
+  border-radius: 35%;
+  padding: 1.5em;
+  color: white;
+  font-weight: bold;
+  
+`;
+
+const StyledButton = styled.button`
+  padding: 1em;
+  background-color: #BC4B51;
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  curson: pointer;
+
+  &:hover {
+    background-color: white;
+    border: 2px solid #BC4B51;
+    color: #BC4B51;
+    font-weight: bold;
+  }
+`;
 
 const Login = () => {
     const [formData, setFormData] = useState({
@@ -40,8 +74,8 @@ const Login = () => {
     return (
         <div>
             <Header/>
-            <h2>Login</h2>
-            <form onSubmit={handleSubmit}>
+            <h2 css={{ color: 'white', fontSize: '2rem' }}>Login</h2>
+            <StyledForm onSubmit={handleSubmit}>
                 <div>
                     <label>Username:</label>
                     <input type="text" name="username" value={formData.username} onChange={handleChange} required />
@@ -50,8 +84,9 @@ const Login = () => {
                     <label>Password:</label>
                     <input type="password" name="password" value={formData.password} onChange={handleChange} required />
                 </div>
-                <button type="submit">Login</button>
-            </form>
+                <br></br>
+                <StyledButton type="submit">Login</StyledButton>
+            </StyledForm>
             <Footer/>
         </div>
     );

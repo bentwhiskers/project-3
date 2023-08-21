@@ -3,6 +3,7 @@ import NavBar from "./navbar";
 import { jsx } from '@emotion/react';
 import { css } from '@emotion/react';
 
+
 export default function Header() {
   
   return (
@@ -18,9 +19,10 @@ export default function Header() {
         color: 'white',
         fontSize: '40px',
         fontFamily: 'Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif',
+        fontStretch: 'expanded',
+        textShadow: '2px 2px 5px #E3E3E3',
       }}>
-      Community Board
-      
+      LocaleLink<i className='fas fa-link'></i>
     </h2>
     <h4
       css={{
