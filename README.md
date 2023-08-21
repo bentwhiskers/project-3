@@ -30,7 +30,7 @@ Our app uses:
 
 ## Usage
 To use, visit our deployed🚀 application with Heroku at this link:
-    > 
+> ☆ https://locale-link-5bc9ca05d178.herokuapp.com/
 
 ![img of LocaleLink website](./client/assets/images/localeLink.png)
 
