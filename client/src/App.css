@@ -9,7 +9,7 @@
 body, html {
   margin: 0;
   padding: 0;
-  background-image: url('/client/assets/images/cork-board.jpeg');
+  background-image: url('/client/src/assets/images/cork-board.jpeg');
   background-size: cover;
   
 }
