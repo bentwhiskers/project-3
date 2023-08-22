@@ -5,8 +5,8 @@ import React from 'react';
 import { jsx } from '@emotion/react';
 import { css } from '@emotion/react';
 import styled from '@emotion/styled';
-import img from '../assets/images/stock-background.jpeg';
-import imgTwo from '../assets/images/stock-pic.jpeg';
+import img from '../assets/images/stock-background';
+import imgTwo from '../assets/images/imgTwo';
 
 const Description = styled.div`
   color: white;
